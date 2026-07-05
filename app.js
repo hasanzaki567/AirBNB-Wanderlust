@@ -225,6 +225,6 @@ app.use((err, req, res, next) => {
 
 
 
-app.listen("8080", (req, res) => {
-  console.log("server is listening on port 8080")
-});
+const port = process.env.PORT || 3000;
+
+app.listen(port, () => console.log(`Server running on port ${port}`));
